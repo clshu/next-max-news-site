@@ -32,7 +32,7 @@ export default async function FilteredNewsPage({ params }) {
   }
 
   if (
-    (selectedYear && !getAvailableNewsMonths().includes(+selectedYear)) ||
+    (selectedYear && !getAvailableNewsYears().includes(+selectedYear)) ||
     (selectedMonth &&
       !getAvailableNewsMonths(selectedYear).includes(+selectedMonth))
   ) {
