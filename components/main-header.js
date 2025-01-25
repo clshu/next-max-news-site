@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import NavLink from './nav-link'
 
 export default function MainHeader() {
   return (
@@ -9,7 +12,10 @@ export default function MainHeader() {
       <nav>
         <ul>
           <li>
-            <Link href="/news">News</Link>
+            <NavLink href="/news">News</NavLink>
+          </li>
+          <li>
+            <NavLink href="/archive">Archive</NavLink>
           </li>
         </ul>
       </nav>
