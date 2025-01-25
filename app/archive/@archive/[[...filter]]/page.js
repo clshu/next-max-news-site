@@ -31,6 +31,14 @@ export default async function FilteredNewsPage({ params }) {
     newsContent = <NewsList news={news} />
   }
 
+  if (
+    (selectedYear && !getAvailableNewsMonths().includes(+selectedYear)) ||
+    (selectedMonth &&
+      !getAvailableNewsMonths(selectedYear).includes(+selectedMonth))
+  ) {
+    throw new Error('Invalid year or month')
+  }
+
   return (
     <>
       <>
